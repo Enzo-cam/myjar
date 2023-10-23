@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { Box, Drawer, List, ListItem, Divider, ListItemIcon, ListItemText, Typography } from "@mui/material"
 import InboxOutlinedIcon from '@mui/icons-material/InboxOutlined'
 import MailOutlinedIcon from '@mui/icons-material/MailOutlineOutlined'
-import JarContext from "@/Context/UIContext"
+import JarContext from "@/Context/UI/UIContext"
 
 
 const menuItems : string[] = ['Inbox', 'Starred', 'Send email', 'Drafts']
