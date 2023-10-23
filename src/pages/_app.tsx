@@ -2,16 +2,19 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ThemeProvider, CssBaseline } from '@mui/material'
 import { lightTheme } from '@/themes'
-import { UIProvider } from '@/Context/UIProvider'
+import { EntriesProvider } from '@/Context/Entries'
+import { UIProvider } from '@/Context/UI/UIProvider'
 
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <UIProvider>
-      <ThemeProvider theme={lightTheme}>
-        <CssBaseline />
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </UIProvider>
+    <EntriesProvider>
+      <UIProvider>
+        <ThemeProvider theme={lightTheme}>
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </UIProvider>
+    </EntriesProvider>
   ) 
 }
