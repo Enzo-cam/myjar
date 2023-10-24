@@ -1,9 +1,35 @@
-import React from 'react'
+import {
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  Typography,
+} from "@mui/material";
+import React, {FC} from "react";
+import { Entry } from "@/Interfaces";
 
-const EntryCard = () => {
-  return (
-    <div>EntryCard</div>
-  )
+interface Props{
+  entry: Entry;
 }
 
-export default EntryCard
+
+const EntryCard:FC<Props> = ({entry}) => {
+  return (
+        // TODO: Aqui se da el drag
+    <Card sx={{ marginBottom: 1 }}>
+      <CardActionArea>
+        <CardContent>
+          <Typography sx={{ whiteSpace: "pre-line" }}>
+            {entry.description}
+          </Typography>
+        </CardContent>
+
+        <CardActions sx={{display: 'flex', justifyContent: 'end', paddingRight: 2}}>
+          <Typography variant="body2">Hace 30 minutos</Typography>
+        </CardActions>
+      </CardActionArea>
+    </Card>
+  );
+};
+
+export default EntryCard;
