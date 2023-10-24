@@ -11,19 +11,19 @@ const Entries_IS : EntriesState ={
     entries: [
         {
             _id: uuidv4(),
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nesciunt ad consectetur eaque porro soluta nam, vero illum amet ipsa.',
+            description: 'Pending: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nesciunt ad consectetur eaque porro soluta nam, vero illum amet ipsa.',
             status: 'Pending',
             createdAt: Date.now(),
         },
         {
             _id: uuidv4(),
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nesciunt ad consectetur  .',
+            description: 'In progress: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nesciunt ad consectetur  .',
             status: 'In progress',
             createdAt: Date.now() - 190242,
         },
         {
             _id: uuidv4(),
-            description: 'Lor amet consectetur adipisicing elit. Fuga nesciunt ad consectetur eaque porro soluta nam, vero illum amet ipsa.',
+            description: 'Finished: Lor amet consectetur adipisicing elit. Fuga nesciunt ad consectetur eaque porro soluta nam, vero illum amet ipsa.',
             status: 'Finished',
             createdAt: Date.now() - 1000000,
         }

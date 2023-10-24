@@ -7,6 +7,7 @@ import Sidebar from "./Sidebar";
 
 interface Props {
     title?: string
+    children: React.ReactNode
 }
 
 const Layout: FC<Props> = ({title = 'MyJar', children}) => {

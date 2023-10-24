@@ -3,6 +3,7 @@ import { NextPage } from 'next/types'
 import {Card, CardHeader, Grid, Typography} from '@mui/material'
 import Layout from '@/Components/Layout'
 import { EntryList } from '@/Components'
+import { blue } from '@mui/material/colors'
 
 const Homepage : NextPage = () => {
 
@@ -11,22 +12,24 @@ const Homepage : NextPage = () => {
       
       <Grid container spacing={2}>
         <Grid item xs={12} sm={4}>
-          <Card sx={{height: 'calc(100vh-100px)'}}>
-            <CardHeader title="Pendientes" />
+          <Card sx={{height: 'calc(100vh-100px)', backgroundColor: '#001d3d'}}>
+            <CardHeader title="Pendientes" sx={{color: 'white'}} />
 
-            <EntryList />
+            <EntryList status='Pending' />
           </Card>
         </Grid>
     
         <Grid item xs={12} sm={4}>
-          <Card sx={{height: 'calc(100vh-100px)'}}>
-            <CardHeader title="En progreos" />
+          <Card sx={{height: 'calc(100vh-100px)', backgroundColor: '#001d3d'}}>
+            <CardHeader title="En progreos" sx={{color: 'white'}}/>
+            <EntryList status='In progress' />
           </Card>
         </Grid>
     
         <Grid item xs={12} sm={4}>
-          <Card sx={{height: 'calc(100vh-100px)'}}>
-            <CardHeader title="Completado" />
+          <Card sx={{height: 'calc(100vh-100px)', backgroundColor: '#001d3d'}}>
+            <CardHeader title="Completado" sx={{color: 'white'}}/>
+            <EntryList status='Finished' />
           </Card>
         </Grid>
       </Grid>
